@@ -47,6 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
+        android:fontFamily="@font/poppins_regular"
         android:text="Design By\nKumar"
         android:textAlignment="center"
         android:textColor="@color/textcolor"
