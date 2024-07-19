@@ -147,7 +147,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button7"
+        android:id="@+id/loginbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -167,9 +167,9 @@
         android:text="Don’t Have Account?"
         android:textColor="@color/textcolor"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/button7"
-        app:layout_constraintStart_toStartOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintEnd_toEndOf="@+id/loginbutton"
+        app:layout_constraintStart_toStartOf="@+id/loginbutton"
+        app:layout_constraintTop_toBottomOf="@+id/loginbutton" />
 
     <TextView
         android:id="@+id/textView12"

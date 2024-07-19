@@ -8,9 +8,6 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -22,7 +19,7 @@ public class LoginActivity extends AppCompatActivity {
 
         // Bind the TextView
         TextView redirectToSignupTextView = findViewById(R.id.nobutton);
-
+      Button redirectToChooselocationButton = findViewById(R.id.loginbutton);
         // Set up the click listener
         redirectToSignupTextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +30,16 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-    }
+
+      redirectToChooselocationButton.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            // Create an Intent to start LoginActivity
+            Intent intent = new Intent(LoginActivity.this, ChooselocationActivity.class);
+            startActivity(intent);
+        }
+    });
+
+}
 
 }
