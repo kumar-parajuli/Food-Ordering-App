@@ -9,9 +9,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.interfaces.ItemClickListener;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.foodorderingapplication.R;
 import com.example.foodorderingapplication.databinding.FragmentHomeBinding;
@@ -85,5 +87,21 @@ public class HomeFragment extends Fragment {
         ImageSlider imageSlider = binding.imageSlider;
         imageSlider.setImageList(imageList);
         imageSlider.setImageList(imageList, ScaleTypes.FIT);
+
+        imageSlider.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onItemSelected(int position) {
+                SlideModel itemPosition = imageList.get(position);
+                String itemMessage = "Selected Image" + position;
+                Toast.makeText(requireContext(), itemMessage, Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void doubleClick(int i) {
+
+            }
+        });
+
     }
 }
